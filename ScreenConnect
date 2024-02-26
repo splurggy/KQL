@@ -1,0 +1,26 @@
+ScreenConnect
+
+
+
+Attempt made to access object SetupWizard.aspx/
+
+SecurityEvent
+| where EventID == 4663 and ObjectName has "SetupWizard.aspx/"
+| project TimeGenerated, Computer, ObjectName
+| distinct Computer, ObjectName
+
+
+Query for SetupWizard.aspx changes
+
+DeviceProcessEvents
+| where ProcessCommandLine contains "SetupWizard.aspx/"
+| project TimeGenerated, DeviceName, ProcessCommandLine
+| distinct DeviceName, ProcessCommandLine
+
+
+Queries for the install of ScreenConnect software
+
+DeviceProcessEvents
+| where FileName in ("ScreenConnect.Client.exe", "ScreenConnect.Service.exe")
+| summarize Count = count() by FileName
+| order by Count desc
