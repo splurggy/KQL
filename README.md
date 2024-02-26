@@ -4,4 +4,6 @@ Welcome to my KQL repository, a curated collection where I share my journey expl
 
 Expect to see:
 
-Personal KQL snippets for various use cases. In-depth analysis and optimization strategies for KQL queries. Guides on leveraging KQL for data analysis and security investigations. Dive in to discover how KQL can enhance your data querying capabilities!
+-Personal KQL snippets for various use cases. 
+-In-depth analysis and optimization strategies for KQL queries. 
+-Guides on leveraging KQL for data analysis and security investigations.
